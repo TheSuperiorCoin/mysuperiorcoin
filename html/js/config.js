@@ -1,6 +1,6 @@
 var config = {
-    apiUrl: "http://127.0.0.1:1984/",
-    mainnetExplorerUrl: "https://moneroexplorer.com/",
+    apiUrl: "http://191.232.179.253/",
+    mainnetExplorerUrl: "http://superior-coin.com:8081/",
     testnetExplorerUrl: "http://139.162.32.245:8082/",
     testnet: true,
     coinUnitPlaces: 12,
@@ -10,8 +10,8 @@ var config = {
     openAliasPrefix: "xmr",
     coinName: 'Monero',
     coinUriPrefix: 'monero:',
-    addressPrefix: 18,
-    integratedAddressPrefix: 19,
+    addressPrefix: 26,
+    integratedAddressPrefix: 27,
     addressPrefixTestnet: 53,
     integratedAddressPrefixTestnet: 54,
     feePerKB: new JSBigInt('2000000000'),//20^10 - for testnet its not used, as fee is dynamic.

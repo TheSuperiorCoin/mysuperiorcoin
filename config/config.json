@@ -1,7 +1,7 @@
 {
   "daemon-url" :
   {
-    "mainnet" : "http://127.0.0.1:18081",
+    "mainnet" : "http://127.0.0.1:16035",
     "testnet" : "http://127.0.0.1:28081"
   },
   "blockchain-path" :
@@ -15,7 +15,7 @@
     "url"      : "127.0.0.1",
     "dbname"   : "openmonero",
     "user"     : "root",
-    "password" : "root"
+    "password" : "my-new-password"
   },
   "wallet_import" :
   {
@@ -23,14 +23,14 @@
     "fee"     : 0,
     "testnet" :
     {
-      "address" : "9tzmPMTViHYM3z6NAgQni1Qm1Emzxy5hQFibPgWD3LVTAz91yok5Eni1pH6zKhBHzpTU15GZooPHSGHXFvFuXEdmEG2sWAZ",
-      "viewkey" : "ae6184287ca791609844f140b8502ccfa2223c04c8699cf31fcd0af1f1d0be08"
+      "address" : "5U8LD8wBeaGaNz5j4jLX9WJQvhg6ftQUZXHQU9V9phXWb49Wm8ghqHATkybnjAYHnbieePUMHUDaaPsqLjZVb95WRtDY2nr",
+      "viewkey" : "9d4180e2bb61f2be165edb26fc2d330c649b1577f1d5ecad1363c5affd81eb04"
     },
     "mainnet" :
     {
       "_comment": "these are official monero project donation address and viewkey. change it to yours",
-      "address" : "44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A",
-      "viewkey" : "f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501"
+      "address" : "5U8LD8wBeaGaNz5j4jLX9WJQvhg6ftQUZXHQU9V9phXWb49Wm8ghqHATkybnjAYHnbieePUMHUDaaPsqLjZVb95WRtDY2nr",
+      "viewkey" : "9d4180e2bb61f2be165edb26fc2d330c649b1577f1d5ecad1363c5affd81eb04"
     }
   },
   "refresh_block_status_every_seconds" : 10,
@@ -38,10 +38,10 @@
   "max_number_of_blocks_to_import"     : 22000,
   "ssl" :
   {
-    "enable" : false,
+    "enable" : true,
     "_comment": "below are example paths to crt and key files need to be given",
-    "ssl-key": "file:///tmp/server.key",
-    "ssl-crt": "file:///tmp/server.crt",
-    "dh-pem" : "file:///tmp/dh2048.pem"
+    "ssl-key": "file:///etc/nginx/ssl/server.key",
+    "ssl-crt": "file:///etc/nginx/ssl/mysuperiorcoin.com.chained.crt",
+    "dh-pem" : "file:///home/nathan/pem/dh2048.pem"
   }
 }
