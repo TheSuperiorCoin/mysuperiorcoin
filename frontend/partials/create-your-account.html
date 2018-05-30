@@ -1,0 +1,139 @@
+<div class="coloured">
+  <div class="w-container">
+    <h1 class="slider-heading">That was simple. Your Account has been created</h1>
+
+    <div class="subhead-text">Already have an account?&nbsp;
+      <a class="login-link steps pointer" data-ix="display-login" show-modal="login">Login to an existing SuperiorCoin account</a>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="w-container create-account-container">
+
+     <input class="nxt-btn nxt-btn-lg" id="btn-next" type="submit" value="Next" data-wait="Please wait..." style="float: right; 5px;display: block">
+    <input class="nxt-btn nxt-btn-lg" id="btn-back" type="submit" value="Back" data-wait="Please wait..." style="float: right; margin-right: 5px;display: none">
+
+<div class="mySlides" style="margin-top: 100px;">
+    <div class="animated fadeInLeft">
+    <div class="no-account-div w-button">
+      <div class="info-header middle">Take Note of your Private Login Key!</div>
+      <div class="no-account-text thin middle">
+  Below this you will find your thirteen word "Private Login Key". Keeping this secure and private is very important, as it is
+  the only way that you will be able to login to your account. As we don't store your private login key on the server
+  there is no way to recover it if it is lost!<br><br>Your private login key can also never be changed, and if it is stolen or otherwise
+  compromised, you will have to move your funds to a new account with a new private login key. Therefore, it is best that you
+  backup your private login key by writing it down, perhaps obscuring it as part of a poem or letter, and storing it in multiple
+  safe and secure places.
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="mySlides"  style="margin-top: 100px;">
+    <div class="animated fadeInLeft">
+    <div class="no-account-div top-box">
+      <div class="info-header middle">Understand the Risks in Using this Service</div>
+      <div class="no-account-text thin middle">
+  This is a web-based interface that allows you to use SuperiorCoin without running a full SuperiorCoin node. However, because this convenience
+  comes at a cost: it is extremely difficult to securely deliver its code to your browser. This means that there is
+  considerable risk in using this service for large amounts!<br><br>It is recommended that you treat this service as you would treat your
+  actual wallet, and not store very large amounts in it. For long-term storage of SuperiorCoin you should create a cold wallet using
+  <a href="the-superior-coin.com/Downloads/SuperiorCoin.zip" style="color:#dbc420">SuperiorCoin Address</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="mySlides" style="margin-top: 100px;">
+    <div class="animated fadeInLeft">
+    <div class="no-account-div upper-box">
+      <div class="info-header middle-top">Your Private Login Key</div>
+      <div class="result-text">{{mnemonic}}</div>
+    </div>
+  </div>
+</div>
+
+  <div class="mySlides"  style="margin-top: 100px;">
+     <div class="animated fadeInLeft">
+    <div class="mid-div" style="height: 330px">
+      <div class="w-form formwrap login-key-form">
+        <form id="email-form" name="email-form" data-name="Email Form" data-redirect="/overview.html" ng-submit="login(seed, mnemonic, mnemonic_confirmation)" >
+          <label class="info-header form middle" for="Login-Key">Confirm your Private Login Key</label>
+          <input class="w-input mnemonic-page" id="Login-Key" type="text" ng-model="mnemonic_confirmation" placeholder="Type your Private Login Key out here to confirm it" name="Login-Key" data-name="Login Key" autocomplete="off" required="">
+          <input class="w-button mnemonic-login" id="form-submits" type="submit" value="Log me in!" data-wait="Please wait...">
+        </form>
+        <div class="w-form-fail" style="display: block;" ng-show="!!error">
+          <p>{{error}}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+<script>
+  
+
+
+var slideIndex = 1;
+
+$('#btn-next').on('click', () => {
+    plusDivs(1);
+  });
+
+$('#btn-back').on('click', () => {
+    plusDivs(-1);
+  });
+
+showDivs(slideIndex);
+
+function plusDivs(n) {
+
+  var Num;
+  Num = slideIndex += n;
+  
+  if(Num == 1){
+    $("#btn-back").css("display", "none");
+     showDivs(Num);
+  }else{
+      if(Num == 2){
+      $("#btn-back").css("display", "block");
+      showDivs(Num);
+    }else{
+      if(Num == 4){
+         $("#btn-next").css("display", "none");
+      }else{
+         $("#btn-next").css("display", "block");
+      }
+      showDivs(Num);
+    }
+  }
+
+
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+
+  if (n > x.length)
+  {
+    
+    slideIndex = 1
+     
+  }    
+  if (n < 1) {
+    
+    slideIndex = x.length
+
+  }
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+</script>

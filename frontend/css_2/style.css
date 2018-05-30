@@ -1,0 +1,414 @@
+html,
+#wrapper {
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+#wrapper.withSidebar {
+	  padding-left: 250px;
+	  transition: all 0.4s ease 0s;
+}
+
+#wrapper.active {
+  	padding-left: 0;
+}
+
+#wrapper.active #sidebar-wrapper {
+  	left: 0;
+}
+
+#wrapper div {
+	overflow: hidden;
+}
+
+/* COLOR */
+.grey   { color: #515151 !important; }
+.yellow { color: #dbc420 !important; }
+.blue   { color: #4ba6ec !important; } 
+
+
+p {
+	line-height: 1.8;
+	font-size: 14px;
+}
+
+
+/* SIDEBAR */
+#sidebar-wrapper {
+  margin-left: -250px;
+  top: 0;
+  left: 250px;
+  width: 250px;
+  background-color: #0b0b0b;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 80px;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {  
+  padding: 0 20px;
+  height: 65px;
+  line-height: 65px;
+}
+
+.sidebar-nav li a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+.sidebar-nav li a:hover {
+	color: #dbc420;
+	text-decoration: underline;
+}
+
+.sidebar-nav li a .fa {
+	width: 30px;
+}
+
+/* HEADER */
+header {
+	background-color: #0b0b0b;
+	min-height: 80px;
+	line-height: 80px;
+	color: #f4f7fc;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 1px;
+}
+
+header .logo img {
+	max-width: 250px;
+	width: 100%;
+}
+
+header a {
+	color: #f4f7fc;
+}
+
+header button.btn {
+	background-color: transparent;
+    border: 2px solid #dbc420;
+    color: #dbc420;
+    padding: 10px 50px;
+    margin: 0 0 0 30px;
+}
+
+header #menu-toggle {
+	margin-left: 20px;
+	font-size: 20px; 
+	color: #fff;
+}
+
+
+/* MAIN */
+main {
+	position: relative;
+	color: #fff;
+	min-height: 1000px;
+    height: 100%;
+    background: #000;
+    z-index: 0;
+}
+
+main::before {	
+	background: url('../images/background.png');	
+	background-position: top center;
+    content: "";
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+main .container {
+	z-index: 2;
+}
+
+main h1,
+main h3 {
+	color: #fff;
+	margin-bottom: 40px !important;
+}
+
+main .btn {
+	color: #1a1a1a !important; 
+	background-color: #dbc420 !important;
+	padding: 5px 30px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+main .box {
+	background-color: #000;
+	border: 2px solid #928315;
+	border-radius: 3px;
+	padding: 50px 60px;
+	margin-bottom: 40px;
+	z-index: 1;
+    position: relative;
+}
+
+main .box2 {
+	padding: 20px 5px 0px;
+	z-index: 1;
+    position: relative;
+}
+
+/* PAGE */
+page {
+	background-color: #fff;
+	position: relative;
+	color: #000;
+	padding: 100px 0;
+	min-height: 800px;
+    height: 100%;	
+    overflow: hidden;
+    float: left;
+    width: 100%;
+}
+
+page h1,
+page h3 {
+	margin: 0 0 20px 0;
+}
+
+page .btn {
+	color: #1a1a1a !important; 
+	background-color: #dbc420 !important;
+	padding: 5px 30px;
+	margin-bottom: 20px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+
+/* TRANSACTIONS */
+#overview table {
+	margin: 20px 0;
+}
+
+
+/* RECEIVE */
+#receive .address {
+	position: relative;
+}
+
+#receive .address input {
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid #ccc; 
+	margin: 30px 0;
+}
+
+#receive .address .fa {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+#receive input[type="submit"] {
+	margin: 40px auto 20px auto;
+	display: block;
+	padding: 5px 80px;
+}
+
+/* ACCOUNT OVERVIEW */
+#account-overview .address {
+	position: relative;
+}
+
+#account-overview input {
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid #ccc; 
+	margin: 30px 0;
+}
+
+#account-overview .fa {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+#account-overview table {
+	margin: 20px 0;
+}
+
+/* SEND FUNDS */
+#send-funds .address {
+	position: relative;
+}
+
+#send-funds input[type="text"] {
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid #ccc; 
+	margin: 30px 0;
+}
+
+#send-funds input[type="submit"] {
+    margin: 40px auto 20px auto;
+    display: block;
+    padding: 5px 80px;
+}
+
+#send-funds .fa {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+
+/* LOGIN */
+#login input[type="submit"].btn {
+	width: 80%;
+	margin: 20px 10%;
+}
+
+/* CREATE ACCOUNT */
+#create-account {
+    padding-top: 200px;
+    line-height: 2;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* RISK */
+#risk .box .fa {
+	background-color: #747474;
+	color: #000;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 32px;
+	border-radius: 100%;
+}
+
+#risk .box h3 {
+	margin-bottom: 40px;
+}
+
+#risk .box p {
+	line-height: 1.8;
+	margin-bottom: 20px;
+}
+
+
+/* PRIVATE KEY */
+#private-key {
+	position: relative;
+	z-index: 2;
+}
+
+#private-key .key {
+	font-size: 20px;
+	max-width: 700px;
+	width: 100%;
+	margin: 20px auto 0 auto;
+	line-height: 2;
+}
+
+#private-key .box form {
+	margin: 40px 0;
+}
+
+#private-key .box input[type="text"] {
+	border: 1px solid #101010;
+	background-color: #000;
+}
+
+#private-key .box input[type="submit"] {
+	display: block;
+	margin: 20px auto;
+}
+
+
+/* TAKE  NOTE */
+#take-note .fa {
+	font-size: 32px;
+}
+
+
+/* FOOTER */
+footer {
+	background-color: #0b0b0b;
+	height: 80px;
+	line-height: 80px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	position: fixed;
+	bottom: 0;
+	z-index: 10;
+	width: 100%;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+footer ul.list-inline>li {
+	padding: 0 1px;
+}
+
+footer ul li .fa {
+	font-size: 20px;
+	color: #707070;
+	background-color: #424242;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+footer ul li .fa.fa-facebook:hover {
+	color: #fff;
+	background-color: #212d46;
+}
+
+footer ul li .fa.fa-twitter:hover {
+	color: #36b9ff;
+	background-color: #fff;
+}
+
+footer ul li .fa.fa-google-plus:hover {
+	color: #fff;
+	background-color: #e04a39;
+}
+
+footer ul li .fa.fa-instagram:hover {
+	color: #9e3db1;
+	background-color: #fff;
+}
+
+footer ul li .fa.fa-telegram:hover {
+	color: #fff;
+	background-color: #36b9ff;
+}
+

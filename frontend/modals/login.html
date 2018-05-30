@@ -1,0 +1,50 @@
+<div class="modal-background" modal-name="login" ng-controller="LoginCtrl">
+    <div class="w-container">
+        <div class="w-clearfix modal-box">
+            <a class="w-inline-block close-modal" hide-modal>
+                <div class="close-overlay pointer" data-ix="close-overlay">+</div>
+            </a>
+
+            <div class="modalhead-div">
+                <h1 class="head-modal">Login to an existing account</h1>
+
+                <div class="subhead-text modal">
+                    Don’t yet have an account?&nbsp;
+                    <a class="login-link" data-ix="close-overlay" hide-modal href="#!/create-your-account">
+                        Create a SuperiorCoin account
+                    </a>
+                </div>
+            </div>
+            <div class="form-div">
+                <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+                    <div class="w-tab-content">
+                        <div class="w-tab-pane" data-w-tab="Tab 1" ng-class="{'w--tab-active': tab_number == 1}">
+                            <div class="form-wrapper">
+                                <form id="email-form" name="email-form" data-name="Email Form" data-redirect="/overview.html"
+                                      ng-submit="login_mnemonic(mnemonic, mnemonic_language)" >
+                                    <label class="field-label" for="Login-Key">Your Private Login Key</label>
+                                    <input class="w-input" id="Login-Key" type="text" placeholder="Enter your Private Login Key here"
+                                           name="Login-Key" data-name="Login Key" autocomplete="off" required="required" ng-model="mnemonic">
+                        
+
+                                    <div class="submit-div">
+                                        <input class="w-button login-btn pointer" id="form-submit" type="submit" value="Enter my account"
+                                               data-wait="Please wait...">
+                                    </div>
+                                   
+
+                                  
+
+                                    <div class="w-form-fail error-backing" style="display: block;" ng-show="!!error">
+                                        <p>{{error}}</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
